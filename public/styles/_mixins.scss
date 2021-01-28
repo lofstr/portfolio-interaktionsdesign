@@ -1,0 +1,4 @@
+@mixin halfRoundButton($height) {
+    height: $height;
+    border-radius: $height / 2;
+}

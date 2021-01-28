@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lofstr</title>
+
+</head>
+
+<body>
+
+    <div class="svgWrapper">
+        <img id="svg1" class="svg" src="img/blob-shape.svg" alt="random blob-shape">
+        <img id="svg2" class="svg" src="img/blob-shape (1).svg" alt="random blob-shape">
+        <img id="svg3" class="svg" src="img/blob-shape (2).svg" alt="random blob-shape">
+        <img id="svg4" class="svg" src="img/blob-shape (3).svg" alt="random blob-shape">
+    </div>
+
+    <div class="centerWrapper">
+        <div class="centerBox startPage">
+            <div class="centerTitleBox">
+                <h1 id="startPageHeader" class="centerTitle">I am Alexander,</h1>
+                <h2 id="centerSubTitle">a cognitive science student
+                    and UX-designer from Linköping </h2>
+
+                <!-- <div class="portfolioButtonBox">
+                    <button class="standardButton portfolioButton">
+                        Projects
+                    </button>
+                    <button class="standardButton aboutButton">
+                        About me
+                    </button>
+
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="centerWrapper">
+        <div style="height: 10vh" class="centerBox">
+            <!-- <div class="centerTitleBox" data-aos="fade-up" data-aos-duration="550">
+                <h1 class="centerTitle">Who am I?</h1>
+            </div> -->
+        </div>
+        <!-- <div id="avatarBox" class="avatarBox aos-init" data-aos="fade-right" data-aos-duration="800"
+            data-aos-delay="250">
+            <img id="avatarImg" src="img/avatar-svgrepo-com.svg" alt="">
+            <h2 class="avatarText">My name is Alexander Löfstrand out of Linköping, Sweden.
+                Currently taking my Masters in Cognitive Science at Linköping University -
+                meaning I try to understand humans...
+            </h2>
+        </div> -->
+
+        <div id="stackInfoBox" class="stackInfoBox" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+
+            <h2 class="stackText" style="margin-bottom: 20px">
+                In order to realise projects I work with both UX-design with web development.
+                Here are some of the tools I have used when working!
+            </h2>
+
+            <div class="logoBox">
+                <img class="logoImg" src="img/logo-javascript.svg" alt="JS Logo">
+                <img class="logoImg" src="img/scssLogo.svg" alt="SASS Logo">
+                <img class="logoImg" src="img/html-5.svg" alt="HTML5 Logo">
+                <img class="logoImg" src="img/firebase-1.svg" alt="Firebase Logo">
+                <img class="logoImg" src="img/angular-icon-1.svg" alt="AngularJS Logo">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="portfolio" class="centerWrapper" style="height: 120vh">
+        <div class="centerBox" style="height: 20vh">
+            <div class="centerTitleBox">
+                <h1 class="stackText" data-aos="fade-up" data-aos-duration="550">... and these are the projects I have
+                    done!</h1>
+            </div>
+        </div>
+        <div class="projectBox">
+            <div class="projectCard" data-aos="fade-up" data-aos-duration="750" data-aos-delay="250">
+                <div class="projectTitle">
+                    <h1 class="projectTitle">
+                        Kaffe-X
+                    </h1>
+                </div>
+                <div class="cardWrapper" id="coffeeProj">
+
+                    <div class="backgroundFilter" ng-class="{'hover':hovering}" ng-mouseenter="hovering=true"
+                        ng-mouseleave="hovering=false">
+                        <p class="projectDescription" ng-class="{'active': hovering}">
+                            Ett projekt på en universitetskurs i interaktionsdesign om sätt att få kaffe på
+                            Campus Valla.
+                        </p>
+                        <a href="#!kaffe"><button class="standardButton projectButton" ng-class="{'active': hovering}">
+                                Utforska!
+                            </button> </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="projectCard" data-aos="fade-up" data-aos-duration="750" data-aos-delay="350">
+                <div class="projectTitle">
+                    <h1 class="projectTitle">
+                        Nappn
+                    </h1>
+                </div>
+                <div class="cardWrapper" id="nappnProj">
+                    <div class="backgroundFilter" ng-class="{'hover':hoveringNappn}" ng-mouseenter="hoveringNappn=true"
+                        ng-mouseleave="hoveringNappn=false">
+                        <p class="projectDescription" ng-class="{'active': hoveringNappn}">
+                            En mobilapplikation framtagen för de nyaantagna studenterna under mottagningen för
+                            att hålla
+                            bland annat ha ett schema, karta och inlägg.
+                        </p>
+                        <a href="#!nappn"><button class="standardButton projectButton"
+                                ng-class="{'active': hoveringNappn}">
+                                Utforska!
+                            </button></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/public/#!/kaffe -->
+<html lang="en" class="gr__127_0_0_1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    
+    
+    
+    
+    <script src="./Lofstr_files/angular.js"></script>
+    <script src="./Lofstr_files/angular-animate.js"></script>
+
+    <script src="./Lofstr_files/angular-route.js"></script>
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Portfolio website for Alexander Löfstrand">
+
+    <title>Lofstr</title>
+<link rel="stylesheet" href="./Lofstr_files/style.css"><link href="./Lofstr_files/css" rel="stylesheet"><link href="./Lofstr_files/aos.css" rel="stylesheet"><link href="./Lofstr_files/css(1)" rel="stylesheet"><link href="./Lofstr_files/css(2)" rel="stylesheet"></head>
+
+<body ng-app="myapp" ng-controller="mainController" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-gr-c-s-loaded="true" class="ng-scope">
+    <script src="./Lofstr_files/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- View wrapper -->
+    <!-- ngView: --><div ng-view="" autoscroll="" class="ng-scope"><div class="projWrapper ng-scope">
+
+    <div class="exitButtonWrapper">
+        <a href="http://127.0.0.1:5500/public/#!"><img src="./Lofstr_files/exit.svg" class="exitButton" alt="exit button"></a>
+    </div>
+    <div class="blackBackground" id="projCoffeeLanding">
+        <div class="filter">
+
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projMainTitle">Kaffe-X</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <p class="subText" id="projCoffeeLandingDescription"> Projektet ni kommer få följa handlar om
+                        designlösningar för kaffeåtkomst på
+                        Campus
+                        Linköping! Det är ett projekt i tre delar med idégenerering och designrymdsanalys varpå det sker
+                        en
+                        fysisk prototypning följt av animering.
+                    </p>
+                    <!-- <img src="img/kaffeProj/coffee-stock.jpeg" alt="guy pouring up coffee"> -->
+                </div>
+
+
+            </div>
+            <div class="fallingArrow hide" ng-class="{&#39;hide&#39;:hideArrow== true}">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="whiteBackground" id="stagesPage">
+        <div class="centerWrapper">
+            <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+            <div class="centerBox">
+                <div class="centerTitleBox">
+                    <h1 id="stageTitle" class="projTitle ng-binding fadeIn">Del 2:
+                        Prototyp</h1>
+                </div>
+            </div>
+            <div class="subTextBox">
+                <!-- ngIf: stage=='Idégenerering' -->
+                <!-- ngIf: stage=='Prototyp' --><p class="subText ng-scope" ng-if="stage==&#39;Prototyp&#39;">
+                    Detta andra steg i projektet kretsar kring fysisk prototypning av framtagna koncept och skisser
+                    till kaffe-frågan. Målet var att utforska vidare fast nu med <b>fokus</b> på själva
+                    interaktionen och mer
+                    konkreta lösningar.
+                    Prototypningen sker med hjälp av RaspberryPi och GrovePi vilket tillåter oss
+                    att programmera interaktionen och funktionen i olika komponenter som vi kan koppla till hårdvaran.
+                    <br>
+                    <br>
+                    Skisser och koncept valdes ut för att vidare utforskas på ett praktiskt plan, ett steg vidare från
+                    den konceptuella nivån. Nu kunde vi testa hur <b>interaktionen</b> skulle fungera med hjälp av bland
+                    annat
+                    lampor, avståndsavläsare och summer. Den största skillnaden blir helt enkelt den tidsmässiga
+                    aspekten
+                    av designen, hur fortgår interaktionen?
+                </p><!-- end ngIf: stage=='Prototyp' -->
+                <!-- ngIf: stage=='Animering' -->
+                <div class="buttonBox">
+
+                    <div class="stageButton" ng-click="change_stage(1)" ng-class="{&#39;active&#39;:stage==&#39;Idégenerering&#39;}">
+                        <p class="buttonText">Idégenerering</p>
+                    </div>
+                    <div class="stageButton active" ng-click="change_stage(2)" ng-class="{&#39;active&#39;:stage==&#39;Prototyp&#39;}">
+                        <p class="buttonText">Prototyp</p>
+                    </div>
+                    <div class="stageButton" ng-click="change_stage(3)" ng-class="{&#39;active&#39;:stage==&#39;Animering&#39;}">
+                        <p class="buttonText">Animering</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- ngIf: stage == 'Idégenerering' -->
+
+    <!-- ngIf: stage == 'Prototyp' --><div ng-if="stage == &#39;Prototyp&#39;" class="ng-scope">
+        <div class="blackBackground longBox">
+            <div class="centerWrapper longBox">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Utforskande!</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="imageBox">
+                        <img class="prototypImg" src="./Lofstr_files/exploration2-cropped.jpeg" alt="">
+                        <p>Här kan ni se ett tidigit skede i vår utforskning av vad som är möjligt med en RaspberryPi!
+                            Vi har kopplat in ett stort antal sensorer och tillbehör av olika slag,
+                            mest framstående på bilden två LED-lampor (t.h) och en LCD-display (t.v).
+                        </p>
+                    </div>
+                    <div class="imageBox">
+                        <img class="prototypImg" src="./Lofstr_files/exploration-cropped.jpeg" alt="">
+                        <p>På bilden syns vårat tidiga försök att bygga ett skal till vår prototyp.
+                            Med hjälp av snöre, piprensare, tejp, kludd och kartong skapar vi något som
+                            kan liknas med en kaffemaskin.
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="whiteBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox aos-init aos-animate" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Interaktion</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox aos-init aos-animate" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText">
+                            Efter initalt utforskande hamnade vi tidigt i idéer kring kaffemaskiner. Men i vårat fall
+                            hamnade stort fokus på interaktionen, att den skulle kännas mindre mekanisk och tråkigt, och
+                            istället göra den rolig och interaktiv, åt båda hållen!
+                            <br>
+                            <br>
+                            Automaten har ett antal meddelande den använder för att informera användaren om vilket
+                            tillstånd
+                            den är i, vad som förväntas av användaren, exempelvis fel-meddelandet som ni ser på bilden
+                            till höger.
+                            Men automaten har också lite roliga inställningar, och <i>easter eggs</i> för att göra
+                            interaktionen roligare.
+                            Vi lade till profiler - inte för användaren utan för maskinen. Beroende på vad man väljer
+                            för
+                            profil får automaten en annan personlighet, då ändras framförallt vad som står på
+                            LCD-displayen
+                            samt färgerna som används.
+                            <br>
+                            <br>
+                            Tanken var att en sådan maskin kunde vara mer personlig och interaktionen blir roligare. Man
+                            kan möjligtvis ha en app eller dylikt för att ladda ner eller skapa andra profiler för
+                            maskinen.
+                        </p>
+
+                    </div>
+                    <img class="skissImg aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" src="./Lofstr_files/error.jpeg" alt="" style="width: 30vw; margin-left: 6vw; ">
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Smart &amp; Smidig</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="imageBox">
+                        <img class="skissImg" src="./Lofstr_files/pull.jpeg" alt="" style="width: 30vw;">
+                        <p>Även om interaktion är viktigt är smidigheten också viktig. Likaså smartheten. Vi valde att
+                            använda en joystick för att hälla upp kaffe, interaktionen överrenstämmer lite mer med vad
+                            som faktiskt händer, snarare än en knapp vilket vi testade först</p>
+                    </div>
+                    <div class="imageBox">
+                        <img class="skissImg" src="./Lofstr_files/pour.jpeg" alt="" style="width: 30vw;">
+                        <p>I ett försök att göra automaten smart finns en sensor som känner av om man hällt upp för
+                            mycket kaffe och avbryter då upphällningen. Man kan även <i>dutta</i> med joysticken för att
+                            mer precist fylla koppen med så mycket man vill ha.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="whiteBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle">Kaffe-buddy</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox">
+                        <p class="subText">
+                            Den slutgiltiga prototypen resulterade i denna ståtliga kaffemaskin!
+                            En kartonglåda med tillbehörande RaspberryPi och sensorer. Tankarna kring maskinen var att
+                            den
+                            skulle vara mer av en personlig maskin med personlighet, därav möjligheten att byta
+                            <b>profil</b> (personlighet) på maskinen genom att rotera pinnen uppe till höger på bilden.
+                            <br>
+                            <br>
+                            Maskinen känner av om man stoppar in en kopp med en IR-sensor. Då lyser LED-lampan igång och
+                            man kan då påbörja processen
+                            att få kaffe.
+                            Därefter kan användaren ställa in kaffe-styrka med <b>slidern</b> och sedan hälla med
+                            <b>joysticken</b>. Om man häller för mycket känner maskinen av det, med den tidigare nämnda
+                            <b>Ultrasonic Ranger</b>. Vill man skynda på processen kan man även med en knapp hälla kaffe
+                            med förbestämda inställningar på kaffet (preset). På LED-skärmen finns hela tiden
+                            instruktioner, uppmaningar och dialog till användaren.
+
+                        </p>
+                    </div>
+
+                    <img class="skissImg" src="./Lofstr_files/overview2.jpeg" alt="" style="width: 30vw; margin-left: 6vw;">
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox aos-init aos-animate" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Feedback</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox aos-init aos-animate" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText" style="color: white;">
+                            Efter ett kritikseminarium fick vi feedback på kaffeautomaten, framförallt på den personlig
+                            aspekten av den. Just eftersom den är personlig måste den anpassa sig till personen, och
+                            även om den kan framstå som lite plojig ger den ändå automaten karaktär. Vid tilfället gavs
+                            förslag på vidare perosnifiering, bland anant att den kunde ha olika röster, olika humör och
+                            beteende. Sådant skulle också kunna bero på tiden på dagen, men också att maskinen lär sig
+                            vanorna hos användaren.
+                            <br>
+                            <br>
+                            Således lärde vi oss från kritikseminariumet att automaten kan ha ett beteende utifrån
+                            inställningar hos användaren, men också dynamiskt utveckla ett beteende utifrån
+                            interaktionen med användaren. Lite som en personlig assistent, fast när det kommer till
+                            kaffe!
+
+                        </p>
+                    </div>
+                    <img class="skissImg aos-init aos-animate" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" src="./Lofstr_files/success.jpeg" alt="" style="width: 30vw; margin-left: 6vw; ">
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="whiteBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Reflektion</h1>
+                    </div>
+                </div>
+                <p class="subText">
+                    Genom att använda av faktiska interaktiva material kan man utforska en helt ny aspekt av
+                    designrymden. Den aspekten är den interaktiva och tidsmässiga aspekten. Det taktila arbetet ger
+                    en annan känsla för vad som lämpar sig eller inte, vad som är möjligt. Samtidigt som det
+                    tillåter utforskning stimulerar den fysiska prototypningen kreativiteten hos designern. Att ha
+                    en idé i huvudet är en sak, men att praktiskt tillämpa denna varpå man tämligen enkelt
+                    kan testa varianter och se begränsningarna, saker som kan vara lätt att förbise vid skissning.
+                    <br>
+                    <br>
+                    I detta steg har fokus varit att utforska, att testa olika lösningar, olika detaljer dess
+                    påverkan vid interaktion. Därför har vi i en tillsynes emergent process åstadkommit en
+                    kaffemaskin som växt fram allt eftersom vi testat och interagerat med den för att försöka
+                    tillgodose den med de egenskapern vi tycker den saknar. Många frågor uppkommer, "Vem ska använda
+                    maskinen?", "Varför vill man använda den?", "Vilka problem löser denna?".
+                    <br>
+                    <br>
+                    För oss började det med att försöka en tillsynes roligare, interaktionsmässigt, kaffemaskin. De
+                    vi hade handskats med var ganska tarvliga att interagera med. Vi diskuterade en interaktion som
+                    går åt båda hållen.
+                </p>
+
+                <div class="stageButton nextStage" ng-click="change_stage(3)" ng-class=" {&#39;active&#39;:stage==&#39;Animering&#39; }">
+                    <p class="buttonText">Animering</p>
+                </div>
+
+            </div>
+        </div>
+    </div><!-- end ngIf: stage == 'Prototyp' -->
+</div></div>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script src="./Lofstr_files/ScrollMagic.min.js"></script>
+<script src="./Lofstr_files/debug.addIndicators.min.js"></script>
+<script src="./Lofstr_files/jquery.min.js"></script>
+<script src="./Lofstr_files/app.module.js"></script>
+<script src="./Lofstr_files/app.config.js"></script>
+<script src="./Lofstr_files/main.js"></script>
+<script src="./Lofstr_files/homeController.js"></script>
+<script src="./Lofstr_files/kaffeController.js"></script>
+<script src="./Lofstr_files/nappnController.js"></script>
+
+</body></html>

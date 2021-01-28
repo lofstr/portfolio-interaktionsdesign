@@ -1,0 +1,732 @@
+<div class="projWrapper">
+
+    <div class="exitButtonWrapper">
+        <a href="#!"><img src="img/exit.svg" class="exitButton" alt="exit button"></a>
+    </div>
+    <div class="blackBackground" id="projCoffeeLanding">
+        <div class="filter">
+
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projMainTitle">Kaffe-X</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <p class="subText" id="projCoffeeLandingDescription"> Projektet ni kommer få följa handlar om
+                        designlösningar för kaffeåtkomst på
+                        Campus
+                        Linköping! Det är ett projekt i tre delar med idégenerering och designrymdsanalys varpå det sker
+                        en
+                        fysisk prototypning följt av animering.
+                    </p>
+                    <!-- <img src="img/kaffeProj/coffee-stock.jpeg" alt="guy pouring up coffee"> -->
+                </div>
+
+
+            </div>
+            <div class="fallingArrow hide" ng-class="{'hide':hideArrow== true}">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="whiteBackground" id="stagesPage">
+        <div class="centerWrapper">
+            <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+            <div class="centerBox">
+                <div class="centerTitleBox">
+                    <h1 id="stageTitle" class="projTitle fadeIn">Del {{stageNumber}}:
+                        {{stage}}</h1>
+                </div>
+            </div>
+            <div class="subTextBox">
+                <p class="subText" ng-if="stage=='Idégenerering'"> Första steget i projektet var idégenerering! Helt
+                    okritiskt
+                    producerades 50st olika
+                    koncept för hur kaffe kan förekomma på Linköpings Universitet. Idéerna är både realistiska och
+                    orealistiska, roliga och tråkiga, smarta och dumma, allt för att utforska designrymden maximalt.
+                    <br>
+                    <br>
+                    Skisser arbetades fram under en veckas tid under flera tillfällen för att inte fastna i liknande
+                    tankebanor och producera innovativa idéer. Fokus har inte legat på att framhålla någon typ av
+                    estetisk
+                    tilltalande skiss utan mängdproducera koncept.
+                    <br>
+                    <br>
+                    Jag försökte att rama in mitt designtänk genom att utgå ifrån olika ord eller koncept som
+                    exempelvis,
+                    intagningsmetod, plats, medan man väntar, leveransmetod eller moral.
+                    <br>
+                    <br>
+                    Fokus var i slutändan <bold>Kvantitet</bold>, inte <bold>Kvalitet</bold> !
+                </p>
+                <p class="subText" ng-if="stage=='Prototyp'">
+                    Detta andra steg i projektet kretsar kring fysisk prototypning av framtagna koncept och skisser
+                    till kaffe-frågan. Målet var att utforska vidare fast nu med <b>fokus</b> på själva
+                    interaktionen och mer
+                    konkreta lösningar.
+                    Prototypningen sker med hjälp av RaspberryPi och GrovePi vilket tillåter oss
+                    att programmera interaktionen och funktionen i olika komponenter som vi kan koppla till hårdvaran.
+                    <br>
+                    <br>
+                    Skisser och koncept valdes ut för att vidare utforskas på ett praktiskt plan, ett steg vidare från
+                    den konceptuella nivån. Nu kunde vi testa hur <b>interaktionen</b> skulle fungera med hjälp av bland
+                    annat
+                    lampor, avståndsavläsare och summer. Den största skillnaden blir helt enkelt den tidsmässiga
+                    aspekten
+                    av designen, hur fortgår interaktionen?
+                </p>
+                <p class="subText" ng-if="stage=='Animering'">
+                    Det tredje steget i projektet kretsade kring animering av något typ av grännsnitt kopplat till
+                    kafféprojektet. Fokus var på att utforska och experimentera med hur olika animationer kan stödja
+                    designen och underlätta för användaren.
+                    <br>
+                    <br>
+                    Jag byggde vidare på idéen av en kaffemaskin med personlighet som prototypades i förra steget. Nu
+                    byggde jag en design av en mobilapplikation i Figma, denna app är ett komplement till kaffemaskinen
+                    för att kontrollera och agerar som dess gränssnitt. Fokus ligger inte direkt i hur applikationen ser
+                    ut utan snarare hur olika animationer framhäver olika kvalitéer och hjälper användaren.
+                    <br>
+                    <br>
+                    Jag har
+                    framförallt försökt förmedla en känsla av lekfullhet i mina animationer för att sätta prägel på hela
+                    konceptet som ganska lekfullt samtidigt som det ska vara tydligt för användaren vad man kan göra.
+                    <br><br>
+
+
+                </p>
+                <div class="buttonBox">
+
+                    <div class="stageButton" ng-click="change_stage(1)" ng-class="{'active':stage=='Idégenerering'}">
+                        <p class="buttonText">Idégenerering</p>
+                    </div>
+                    <div class="stageButton" ng-click="change_stage(2)" ng-class="{'active':stage=='Prototyp'}">
+                        <p class="buttonText">Prototyp</p>
+                    </div>
+                    <div class="stageButton" ng-click="change_stage(3)" ng-class="{'active':stage=='Animering'}">
+                        <p class="buttonText">Animering</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div ng-if="stage == 'Idégenerering'">
+        <div class="blackBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Så här kan det se ut!</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <img class="skissImg" src="img/kaffeProj/skiss.jpeg" alt="">
+                    <img class="skissImg" src="img/kaffeProj/skiss2.jpeg" alt="">
+                    <img class="skissImg" src="img/kaffeProj/skiss3.jpeg" alt="">
+                </div>
+                <p class="subText" style="padding-top: 50px">
+                    Vissa saker knasigare än andra...
+                </p>
+
+
+            </div>
+        </div>
+        <div class="whiteBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Designrymdsanalys</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox">
+
+                        <p class="subText" data-aos="fade-right" data-aos-duration="800" data-aos-delay=300>
+                            Efter skissandet utfördes en designrymdsanalys för att bedöma relevanta kriterier för
+                            produkten.
+                            Detta gjordes genom en RGT (Repertory Grid Technique) i en grupp av tre. Utefter stickprov
+                            av
+                            skisserna bedömdes relevanta kriterier för respektive skiss. Efter tio skisser analyserats
+                            och en del sållande landade vi i ett antal bipolära skalor som skisser för kaffeprodukten
+                            kunde analyseras utifrån.
+                            <br>
+                            <br>
+                            Därefter ritades designrymden och nu hur andra skisser än de tidigare ställde sig gentemot
+                            de
+                            utvalda skalorna. De röda strecken representerar olika skisser som vi valt ut slumpmässigt
+                            och
+                            de blå linjerna representerar vad vi anser vara ramen för en rimlig produkt.
+                            <br>
+                            <br>
+                            Vi hade i varje fall nu ett <b>verktyg</b> för att bedöma olika lösningar.
+
+                        </p>
+
+
+                    </div>
+                    <img class="skissImg" src="img/kaffeProj/designrymdsanalys1-cropped.jpeg" alt=""
+                        style="width: 30vw; margin-left: 9vw;" data-aos="fade-left" data-aos-duration="800"
+                        data-aos-delay=300>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="blackBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Repertory Grid Technique</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <img class="skissImg" src="img/kaffeProj/designrymdsanalys1-cropped.jpeg" alt=""
+                        style="width: 30vw;">
+                    <img class="skissImg" src="img/kaffeProj/designrymdsanalys2-cropped.jpeg" alt=""
+                        style="width: 30vw;">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="whiteBackground" id="test">
+            <div class="centerWrapper" style="padding-bottom: 10vh">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Reflektion</h1>
+                    </div>
+                </div>
+                <p class="subText">
+                    I denna fas har jag både utforskat en stor mängd idéer genom att okritiskt skissa i mängder, samt
+                    konvergerat genom att utföra en designrymdsanalys. Designrymdsanalysen som användes (RGT), var
+                    viktig
+                    för arbetet för annars hade jag endast uppnåt en mängd skisser som jag är svåra att göra något med
+                    utan
+                    vidare eftertanke. Genom att genomföra en sådan analys kan man avgöra vilka delar av designrymden
+                    som
+                    utforskats och vilka man inte lyckats utforska lika bra. I bilden ovan ser man hur vissa delar av de
+                    binära skalorna är tomma, det är områden som egentligen inte utforskats i det initiala
+                    designarbetet.
+                    Vidare avslöjar en sådan designrymdsanalyds vilka begränsningar som de olika designerna medför, det
+                    är
+                    egentligen detta som ger upphov till de olika kritierna varpå designerna blir bedömda i
+                    designrymdsanalysen (Dove, G., Hansen, N. B., & Halskov, K. 2016).
+                    <br>
+                    <br>
+                    Vid utförandet av själva designrymdsanalysen var vi i grupp och hade då sammanlagt 150st skisser
+                    till
+                    förfogande. Målet var då att gå igenom ett antal för att försöka identifiera de kriterier vi ansåg
+                    vara
+                    relevanta för designen och som uppkom i de olika designerna. Processen var metodiskt genomförd men
+                    ändå
+                    subjektiv i sin natur och det visade sig svårt att ibland avgöra vad som var viktigt och huruvida
+                    olika
+                    kriterier var för vaga eller gick in i varandra för mycket. Många gånger blev också de alldeles för
+                    uppenbara där den binära skalan var för extrem, t.ex. genomförbar / ogenomförbar ger inte särskilt
+                    mycket. Man borde tänkt lite mer på de UX-kvalitéer som Arvola, M., & Holmlid, S. (2015) skriver om
+                    för
+                    att grunda sina tankar i något. Då kan man ställa sig frågor angående olika aspekter och skapa en
+                    mer
+                    rigorös metod för att göra generera kvalitéer, eller som författarna kallar de, UX-kvalitéer. Vissa
+                    blir uppenbarligen mer applicerbara, exempelvis frågor kring användbarhet snarare än etiska frågor.
+                    Men
+                    i slutändan går det ändå att dra något nyttigt ut ur varje kategori som författarna föreslår och på
+                    så
+                    sätt förankra sin metod i litteraturen och göra den både enklare och mer rigorös.
+
+                </p>
+
+                <div class="stageButton nextStage" ng-click="change_stage(2)" ng-class="{'active':stage=='Prototyp'}">
+                    <p class="buttonText">Prototyp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="stage == 'Prototyp'">
+        <div class="blackBackground longBox">
+            <div class="centerWrapper longBox">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Utforskande!</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="imageBox">
+                        <img class="prototypImg" src="img/kaffeProj/prototyp/exploration2-cropped.jpeg" alt="">
+                        <p>Här kan ni se ett tidigit skede i vår utforskning av vad som är möjligt med en RaspberryPi!
+                            Vi har kopplat in ett stort antal sensorer och tillbehör av olika slag,
+                            mest framstående på bilden två LED-lampor (t.h) och en LCD-display (t.v).
+                        </p>
+                    </div>
+                    <div class="imageBox">
+                        <img class="prototypImg" src="img/kaffeProj/prototyp/exploration-cropped.jpeg" alt="">
+                        <p>På bilden syns vårat tidiga försök att bygga ett skal till vår prototyp.
+                            Med hjälp av snöre, piprensare, tejp, kludd och kartong skapar vi något som
+                            kan liknas med en kaffemaskin.
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="whiteBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Interaktion</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText">
+                            Efter initalt utforskande hamnade vi tidigt i idéer kring kaffemaskiner. Men i vårat fall
+                            hamnade stort fokus på interaktionen, att den skulle kännas mindre mekanisk och tråkigt, och
+                            istället göra den rolig och interaktiv, åt båda hållen!
+                            <br>
+                            <br>
+                            Automaten har ett antal meddelande den använder för att informera användaren om vilket
+                            tillstånd
+                            den är i, vad som förväntas av användaren, exempelvis fel-meddelandet som ni ser på bilden
+                            till höger.
+                            Men automaten har också lite roliga inställningar, och <i>easter eggs</i> för att göra
+                            interaktionen roligare.
+                            Vi lade till profiler - inte för användaren utan för maskinen. Beroende på vad man väljer
+                            för
+                            profil får automaten en annan personlighet, då ändras framförallt vad som står på
+                            LCD-displayen
+                            samt färgerna som används.
+                            <br>
+                            <br>
+                            Tanken var att en sådan maskin kunde vara mer personlig och interaktionen blir roligare. Man
+                            kan möjligtvis ha en app eller dylikt för att ladda ner eller skapa andra profiler för
+                            maskinen.
+                        </p>
+
+                    </div>
+                    <img class="skissImg" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300"
+                        src="img/kaffeProj/prototyp/error.jpeg" alt="" style="width: 30vw; margin-left: 6vw; ">
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Smart & Smidig</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="imageBox">
+                        <img class="skissImg" src="img/kaffeProj/prototyp/pull.jpeg" alt="" style="width: 30vw;">
+                        <p>Även om interaktion är viktigt är smidigheten också viktig. Likaså smartheten. Vi valde att
+                            använda en joystick för att hälla upp kaffe, interaktionen överrenstämmer lite mer med vad
+                            som faktiskt händer, snarare än en knapp vilket vi testade först</p>
+                    </div>
+                    <div class="imageBox">
+                        <img class="skissImg" src="img/kaffeProj/prototyp/pour.jpeg" alt="" style="width: 30vw;">
+                        <p>I ett försök att göra automaten smart finns en sensor som känner av om man hällt upp för
+                            mycket kaffe och avbryter då upphällningen. Man kan även <i>dutta</i> med joysticken för att
+                            mer precist fylla koppen med så mycket man vill ha.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="whiteBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Kaffe-buddy</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText">
+                            Den slutgiltiga prototypen resulterade i denna ståtliga kaffemaskin!
+                            En kartonglåda med tillbehörande RaspberryPi och sensorer. Tankarna kring maskinen var att
+                            den
+                            skulle vara mer av en personlig maskin med personlighet, därav möjligheten att byta
+                            <b>profil</b> (personlighet) på maskinen genom att rotera pinnen uppe till höger på bilden.
+                            <br>
+                            <br>
+                            Maskinen känner av om man stoppar in en kopp med en IR-sensor. Då lyser LED-lampan igång och
+                            man kan då påbörja processen
+                            att få kaffe.
+                            Därefter kan användaren ställa in kaffe-styrka med <b>slidern</b> och sedan hälla med
+                            <b>joysticken</b>. Om man häller för mycket känner maskinen av det, med den tidigare nämnda
+                            <b>Ultrasonic Ranger</b>. Vill man skynda på processen kan man även med en knapp hälla kaffe
+                            med förbestämda inställningar på kaffet (preset). På LED-skärmen finns hela tiden
+                            instruktioner, uppmaningar och dialog till användaren.
+
+                        </p>
+                    </div>
+
+                    <img class="skissImg" src="img/kaffeProj/prototyp/overview2.jpeg" alt="" data-aos="fade-left"
+                        data-aos-duration="800" data-aos-delay="300" style="width: 30vw; margin-left: 6vw;">
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Feedback</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText" style="color: white;">
+                            Efter ett kritikseminarium fick vi feedback på kaffeautomaten, framförallt på den personlig
+                            aspekten av den. Just eftersom den är personlig måste den anpassa sig till personen, och
+                            även om den kan framstå som lite plojig ger den ändå automaten karaktär. Vid tilfället gavs
+                            förslag på vidare perosnifiering, bland anant att den kunde ha olika röster, olika humör och
+                            beteende. Sådant skulle också kunna bero på tiden på dagen, men också att maskinen lär sig
+                            vanorna hos användaren.
+                            <br>
+                            <br>
+                            Således lärde vi oss från kritikseminariumet att automaten kan ha ett beteende utifrån
+                            inställningar hos användaren, men också dynamiskt utveckla ett beteende utifrån
+                            interaktionen med användaren. Lite som en personlig assistent, fast när det kommer till
+                            kaffe!
+
+                        </p>
+                    </div>
+                    <img class="skissImg" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300"
+                        src="img/kaffeProj/prototyp/success.jpeg" alt="" style="width: 30vw; margin-left: 6vw; ">
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="whiteBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Reflektion</h1>
+                    </div>
+                </div>
+                <p class="subText">
+                    Genom att använda av faktiska interaktiva material kan man utforska en helt ny aspekt av
+                    designrymden. Den aspekten är
+                    den interaktiva och den tidsmässiga aspekten. Det taktila arbetet ger en annan känsla för vad som
+                    lämpar sig eller inte,
+                    vad som är möjligt (Vallgårda, A. & Sokoler, T, 2010). Samtidigt som det tillåter utforskning
+                    stimulerar det fysiska
+                    prototypningsarbetet kreativiteten hos designern. Att ha en idé i huvudet är en sak, men att
+                    praktiskt tillämpa denna
+                    varpå man tämligen enkelt kan testa varianter och se begränsningarna, saker som kan vara lätt att
+                    förbise vid skissning
+                    och designrymdsanalys.
+                    <br>
+                    <br>
+
+                    I detta steg har fokus varit att utforska, att testa olika lösningar, olika detaljer och dess
+                    påverkan vid interaktion.
+                    Därför har vi i en tillsynes emergent process åstadkommit en kaffemaskin som växt fram allt eftersom
+                    vi testat och
+                    interagerat med den för att försöka tillgodose den med de egenskaper vi tycker att den saknar. Många
+                    frågor uppkommer,
+                    "Vem ska använda maskinen?", "Varför vill man använda den?", "Vilka problem löser denna maskin?".
+                    <br>
+                    <br>
+
+                    För oss började det med att försöka skapa en, interaktionsmässigt, roligare kaffemaskin. De vi hade
+                    handskats med var
+                    ganska tarvliga att interagera med. Det slutade med en kaffemaskin med karaktär, som är rolig och
+                    smidig samtidigt!
+                    Många av de sakerna inkorporerade i maskinen var saker som vi kom på medan vi byggde, hur det kändes
+                    med joystick, vad
+                    man kan göra med en IR-skanner och hur långt den räcker. Vi visste inte ens att det var möjligt
+                    förrän vi hade börjat
+                    utforska, och som Löwgren, J. (2016) skriver så är det viktigt att få arbeta med materialet som
+                    designer för att se
+                    möjligheterna, men också begränsningarna. Som han påpekar börjar man inse att artefakter förmedlar
+                    kunskap och är mer än
+                    bara material. De kan bidra till designprocessen precis som skissning bidrar, att arbeta praktiskt
+                    med material blir
+                    därmed ett komplement för designern i dess arsenal för designmetoder.
+
+                </p>
+
+                <div class="stageButton nextStage" ng-click="change_stage(3)"
+                    ng-class=" {'active':stage=='Animering' }">
+                    <p class="buttonText">Animering</p>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+    <div ng-if="stage == 'Animering'">
+        <div class="blackBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Figma Prototyp</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText whiteText">
+                            Prototypen skapades som sagt med hjälp av programmet Figma. Till höger är huvudskärmen för
+                            applikationen illustrerad. Det finns egentligen fem interaktiva element, även om inte alla
+                            är funktionella i denna prototyp. Tanken var att detta skulle agera som en förlängning av
+                            maskinen och samtidigt behålla lekfullheten. Därmed är den inte särskilt komplex och
+                            navigationen är ganska ytlig och enkel med mycket animering.
+                            <br><br>
+                            Längst upp i rutan ser man ett antal roliga fakta om maskinen som man själv kan ställa in
+                            under "Statistic". Det står även huruvida maskinen är igång eller inte i statusfältet.
+                            Efter det finns en Make Coffee knapp som är huvudfunktionaliteten, att säga åt maskinen att
+                            brygga kaffe när man ej är närvarande. Därefter finns fyra olika kategorier av inställningar
+                            av maskinen.
+
+
+                        </p>
+                    </div>
+                    <img class="skissImg" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300"
+                        src="img/kaffeProj/animering/STARTPAGE.png" alt=""
+                        style="width: 20vw; margin-left: 6vw; margin-top: -5vh; ">
+                </div>
+            </div>
+        </div>
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle" style="float:left;">Startsida</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <video style="user-select: none; width: 20vw; height: auto; margin-top: 3vh; margin-right:1vw;"
+                        data-aos="fade-right" data-aos-duration="800" data-aos-delay="300" controls>
+                        <source src="img/kaffeProj/animering/Loading.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="subTextBox" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText whiteText" style="margin-top: 6vh;">
+                            Startsidan som ni såg innan föregås av en laddningsanimation som ska försöka fånga
+                            användaren samtidigt som den inte presenterar all information samtidigt. I videon ser ni
+                            också hur en liten overlay kommer upp i form av ett kort när man klickar på "Make
+                            Coffee"-knappen. Animationen är ganska simpel för att rikta uppmärksamheten nedåt samtidigt
+                            som resten av skärmen blir grå för att visa att detta nya kort ligger ovanför det andra. Det
+                            underlättar även för användaren att inte byta skärm helt och hållet då navigationen blir mer
+                            transparant och snabbare för en sådan funktion som inte kräver en helt ny sida.
+                            <br><br>
+                            Något som kan vara problematiskt är att de fyra inställningsalternativen kommer in var för
+                            sig och inte som en enhet och hela laddningsanimationen blir lite väl lång. Dessutom är den
+                            status-information onödig då användaren som tryckt på att börja brygga kaffe får en annan
+                            knapp där det står när det blir klart och därmed vet huruvida maskinen är igång eller inte
+                            på så sätt.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Preset</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <div class="subTextBox" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText whiteText">
+                            En av de fyra alternativen på startsidan var "Preset" vilket navigerar användaren till en
+                            sida med alternativ för att modifiera och skapa sina förinställningar för kaffe. Detta görs
+                            genom en kort animation som ändrar huvudrubriken. Vidare kan man expandera och minimera
+                            olika <i>presets</i> vilket gör att de fälls ihop och vecklas ut från sin rubrik. För att
+                            tydligt visa att någon ändring har gjorts läggs en stor bekräftelse ruta över hela skärmen
+                            en kort stund för att tydligt visa att en ändring gjorts.
+                            <br><br>
+                            Något som kom fram som feedback var att navigationen var lite otydligt, eftersom
+                            navigeringen till sidan sker genom en animering åt sidan bör rimligtvis den gå tillbaka åt
+                            samma håll medan den nu egentligen bara tonar ut. Dessutom är animationerna när de ska
+                            expandera och minimera inte helt korrekta, men tanken är att de ska glida ner och upp
+                            snarare än att tona in.
+                        </p>
+
+                    </div>
+                    <video style="user-select: none; width: 20vw; height: auto; margin-top: -5vh; " data-aos="fade-left"
+                        data-aos-duration="800" data-aos-delay="300" controls>
+                        <source src="img/kaffeProj/animering/PresetMov.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle" style="float:left;">Interagera!</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+                    <video style="user-select: none; width: 20vw; height: auto; margin-top: 3vh; " data-aos="fade-right"
+                        data-aos-duration="800" data-aos-delay="300" controls>
+                        <source src="img/kaffeProj/animering/WiggleGif.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="subTextBox" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText whiteText" style=" margin-top: 4vh;">
+                            I de fall en användare inte trycker på något under en period används denna animation för att
+                            uppmuntra och visa var man kan interagera och fånga uppmärksamheten hos användaren.
+                            Lekfullheten i animationen förstärker karaktären i applikationen som lekfull.
+                            <br><br>
+                            Efter lite feedback ökade jag intensiteten i rörelsen som tidigare var ganska långsam för
+                            att på så vis överdriva effekten och tydligare fånga användarens uppmärksamhet.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="blackBackground longBox">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox" data-aos="fade-right" data-aos-duration="500">
+                        <h1 class="projTitle">Personlighet</h1>
+                    </div>
+
+                </div>
+                <div class="descriptionBox">
+
+                    <div class="subTextBox" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+                        <p class="subText whiteText">
+                            För att ändra personligheten för kaffemaskinen kan man navigera genom "Personality".
+                            En
+                            övergångsanimation likt den för <i>presets</i> används för att visa var man tagit
+                            sig medan
+                            det laddar. Korten går att navigera sidleds vilket indikeras av plupparna på botten
+                            av
+                            skärmen. Vid val av en ny personlighet ändras namnet på personligheten som använts
+                            och
+                            förtydligas genom att tillfälligt förstora namnet och på så sätt undvika <i>change
+                                blindness</i>.
+                        </p>
+
+                    </div>
+                    <video style="user-select: none; width: 20vw; height: auto; margin-top: -5vh; " data-aos="fade-left"
+                        data-aos-duration="800" data-aos-delay="300" controls>
+                        <source src="img/kaffeProj/animering/Personality.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="whiteBackground">
+            <div class="centerWrapper">
+                <!-- Lägg till sticky X ruta i hörnet, högra hörner, sne/rund/crescent X -->
+                <div class="centerBox">
+                    <div class="centerTitleBox">
+                        <h1 class="projTitle" style="float:left;">Reflektion</h1>
+                    </div>
+                </div>
+                <p class="subText">
+                    Enligt Google (Material.io) ska animationer användas för att vara informativa, för att uttrycka sig
+                    eller för att skifta sätta fokus på saker. Dessa tre principer är något jag försökt förhålla mig
+                    till när jag gjort mina animationer. Försökte uttrycka en känsla av lekfullhet genom hela
+                    applikationen, och samtidigt försöka undvika onödiga animationer som tar för mycket fokus på
+                    användaren och lägger på fel saker. Likaså försökte jag använda animationer för att informera
+                    användaren om relationerna mellan olika element, exempelvis genom de olika transitioner mellan
+                    sidorna eller kortet som åker upp. Detta var dock något jag kunde förbättra i efterhand då det inte
+                    alltid var konsekvent vilket kan vara förvirrande för användaren.
+                    <br><br>
+                    I processen är det lätt att fastna i en idé för en animation, man borde kanske ha applicerat
+                    liknande metodologi som vid det initiala skissandet för att få fram idéer på hur animationer skulle
+                    kunna hjälpa. Likaså bör man fråga sig innan man börjar vad man vill uppnå med dem, även om
+                    uppgiften i sig nu var att utforska och testa. Som Chevalier, F. et al. (2016) skriver finns det
+                    ganska många olika sätt som animering kan främja en design, men det bygger mycket på eftertanke. Ett
+                    exempel var att emotioner kan förmedlas genom animationer, vilket är något jag försökt göra. Men det
+                    kan också vara för att illustrera samband eller skapa visuella metaforer. Kort sagt kan man förankra
+                    mycket tanke i de animationerna man skapar med hänseende till mål och målgrupp för att förstärka
+                    sitt budskap och främja applikationen.
+                    <br><br>
+                    Personligen känner jag att denna applikation skulle främjas av ytterligare iterationer för att
+                    skapa en bättre helhet samt tillåta nya idéer att komma fram, samtidigt som jag fokuserar på hur
+                    animationerna visar på spatiala och hierarkiska förhållanden och hur man gör just denna applikation
+                    så rolig och lekfull som möjligt för det är de huvudmålen jag identifierat för denna applikation,
+                    samtidigt som den måste vara väldigt simpel. Om det är något jag tar med mig från detta är att inte
+                    hantera animationer som ett kapitel för sig utan att inkludera de i designprocessen tidigt. Head, V.
+                    (2016) betonar precis detta i sin bok, och vikten i hur animationer kan forma designprocessen, inte
+                    minst när det kommer till hur man navigerar i applikationen.
+
+                </p>
+
+                <div class="stageButton nextStage" ng-click="change_stage(1)"
+                    ng-class=" {'active':stage=='Idégenerering' }">
+                    <p class="buttonText">Idégenerering</p>
+                </div>
+                <br>
+
+            </div>
+        </div>
+    </div>
+</div>

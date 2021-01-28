@@ -1,0 +1,296 @@
+.projWrapper {
+    height: 100%;
+    position: relative;
+
+    .filter {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(black, 0.75);
+    }
+
+    .centerBox {
+        padding-top: 8vh !important;
+    }
+
+    .longBox {
+        min-height: 110vh;
+    }
+
+    #projCoffeeLanding {
+        background-image: url("../img/kaffeProj/coffee_background.jpeg");
+        background-size: cover;
+        //z-index: 2;
+    }
+
+    .exitButtonWrapper {
+        position: absolute;
+        right: 0px;
+        height: 100%;
+
+        .exitButton {
+            position: sticky;
+            z-index: 1;
+            top: 0px;
+            width: 90px;
+            cursor: pointer;
+        }
+    }
+
+    .projMainTitle {
+        padding-top: 10vh;
+        color: white;
+        animation: fadeIn 3.0s;
+        font-family: 'Roboto Slab',
+            serif;
+        //font-style: italic;
+        letter-spacing: 2px;
+        font-size: 120px;
+        font-weight: 600;
+        padding-bottom: 3vh;
+        //text-decoration: underline;
+
+        @media screen and (max-width: 1300px) {
+            font-size: 64px;
+        }
+    }
+}
+
+.centerWrapper.longBox {
+    height: 100%;
+}
+
+
+
+.descriptionBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; // safari fix
+    flex-direction: row; //safari fix
+
+    .subText {
+        width: 800px;
+    }
+
+    .prototypImg {
+        width: 600px;
+        margin-left: 20px;
+
+        @media screen and (max-width: 1300px) {
+            width: 400px;
+        }
+
+        &.canHover {
+            &:hover {
+                transform: scale(1.2);
+                transition-duration: 0.5;
+            }
+        }
+    }
+
+
+    .skissImg {
+        width: 20vw;
+        border-radius: 4px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 1.3)
+    }
+
+    .imageBox {
+        margin: 10px 20px;
+        width: 35vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start; // safari fix
+        flex-direction: row; //safari fix
+        padding: 15px;
+
+
+
+
+        .prototypImg {
+            width: 30vw;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 1)
+        }
+
+        p {
+            display: block;
+            margin-top: 3vh;
+            width: 30vw;
+        }
+
+    }
+
+    .prototypImg {
+        width: 20vw;
+        border-radius: 4px;
+    }
+}
+
+.whiteText {
+    color: #cecece !important;
+}
+
+
+.projTitle {
+    font-family: 'Roboto Slab',
+        serif;
+    letter-spacing: 2px;
+    font-size: 62px;
+    font-weight: 800;
+    padding-bottom: 3vh;
+
+    @media screen and (max-width: 1300px) {
+        font-size: 44px;
+    }
+
+    &.fadeIn {
+        animation: fadeIn 1.0s;
+
+    }
+}
+
+
+
+.subText {
+    color: rgb(236, 236, 236);
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1.5;
+    animation: fadeIn 3.5s;
+
+
+    @media screen and (max-width: 1300px) {
+        font-size: 18px;
+        line-height: 30px;
+
+        &#projCoffeeLandingDescription {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+
+
+}
+
+
+
+.whiteBackground {
+
+    min-height: 100vh;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+
+
+    .subText {
+        color: rgb(56, 56, 56);
+    }
+}
+
+.blackBackground {
+    height: 100%;
+    min-height: 100vh;
+    background-color: black;
+    position: relative;
+
+
+    .projTitle {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+
+.fallingArrow {
+    transition: 2s;
+    transition-delay: 2s;
+
+    &.hide {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.subTextBox {
+    display: flex;
+
+    .subText {
+        @media screen and (max-width: 1300px) {
+            font-size: 18px;
+        }
+
+        width: 43vw;
+        //height: 481px;
+        font-size: 24px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: #1d1d1d;
+        animation-duration: 2.5s;
+    }
+
+    .buttonBox {
+        display: block;
+    }
+
+}
+
+
+
+.stageButton {
+    margin-left: 12vw;
+    margin-bottom: 10vh;
+    margin-top: 2vh;
+    width: 296px;
+    height: 95px;
+    border-radius: 4px;
+    background-color: #353232;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+
+    &.active {
+        animation: fadeIn;
+        animation-duration: 0.5s;
+        background-color: #f57f1e;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+
+    }
+
+    &.nextStage {
+        margin-left: 0vw;
+        margin-bottom: vh;
+        margin-top: 10vh;
+    }
+
+
+    .buttonText {
+        padding-top: 31px;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: SemiBold;
+        text-transform: uppercase;
+        line-height: 29px;
+        letter-spacing: normal;
+        color: #ffffff;
+        text-align: center;
+        margin: auto;
+        animation: fadeIn;
+        animation-duration: 2s;
+    }
+}
+
+.rotateimg90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
